@@ -1,32 +1,40 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/bookzone/view/conectare-bd.php';
-include 'homepage.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/bookzone/view/includes/config.php';
+
+echo '
+<link rel="stylesheet" type="text/css"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/bookzone/admin/includes/stylesheet-admin.css">
+<link rel="stylesheet" type="text/css" href="/bookzone/view/includes/stylesheet.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+';
 ?>
 
-<div class="container">
-	<form class="signup-form" method="POST" action="signup-inc.php">
-		<input type='text' class='form-control' name='nume' placeholder='Nume'> <br>
-		<input type='text' class='form-control' name='prenume' placeholder='Prenume'> <br>
-		<input type='text' class='form-control' name="username" placeholder='Username'> <br>
-		<input type="password" class="form-control" name="password" placeholder="Password"> <br>
-		<input type="submit" class="btn btn-primary" name='Trimite' value='Trimite'>
-	</form>
+<div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+        <h3>Sign in here</h3>
+        <form class="form-signup" action="signup-inc.php" method="post" name="form">
+                <div class="inputBox">
+                    <label for="nume">Nume</label>
+                    <input type="text" class="form-styling" name="nume" placeholder="" />
+                    <label for="prenume">Prenume</label>
+                    <input type="text" class="form-styling" name="prenume" placeholder="" />
+                    <label for="email">Email</label>
+                    <input type="text" class="form-styling" name="email" placeholder="" />
+                    <label for="username">Username</label>
+                    <input type="text" class="form-styling" name="username" placeholder="" />
+                    <label for="password">Password</label>
+                    <input type="password" class="form-styling" name="password" placeholder="" />
+                    <input type="submit" class="btn btn-primary" name="Trimite" value="Trimite">
+                </div>
 
-	<?php
-	if (isset($_GET['info']) && $_GET['info'] == 'ok')
-	{
-		echo '<p style="text-align:center; color:green; font-size:20px;"> Contul a fost creat cu succes</p>';
-	}
-	else if (isset($_GET['info']) && $_GET['info'] == 'eroare')
-	{
-		echo '<p style="text-align:center; color:red; font-size:20px;"> A aparut o eroare</p>';
-	}
-	else if (isset($_GET['info']) && $_GET['info'] == 'exista')
-	{
-		echo '<p class="alert alert-danger" style="text-align:center;  font-size:20px;"> Username exista deja</p>';
-	}
-	?>
-</div>
+            </form>
+
+    </div>
+
+        
+
+
 <?php
 include 'footer.php';
 ?>

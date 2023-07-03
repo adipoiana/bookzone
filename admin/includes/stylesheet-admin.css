@@ -1,0 +1,185 @@
+.login-admin {
+    text-align: center;
+    padding-top: 26px;
+
+}
+
+.login-admin h2 {
+    padding-bottom: 20px;
+}
+
+.background-admin {
+    background-image: url(/bookzone/admin/login-admin.jpg);
+    background-size: cover;
+
+}
+
+.panou-administrare {
+    width: 42% !important;
+    background-color: aliceblue;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+
+}
+
+/* admin */
+.signup-admin .btn {
+    margin-top: 10px;
+    background: #c5c4d947;
+    margin-right: 10px;
+}
+
+.signup-admin a {
+    text-align: right;
+    text-decoration: none;
+    color: black;
+}
+
+.signup-admin {
+    text-align: right;
+}
+
+.admin {
+    margin-top: 100px;
+}
+
+.login-admin form {
+    display: block;
+    width: 50% !important;
+    margin: auto;
+}
+
+.panou-administrare form {
+    display: block;
+    width: 50% !important;
+    margin: auto;
+}
+
+.panou-administrare h2 {
+    padding-top: 20px;
+}
+
+.back-button {
+    text-align: right;
+
+}
+
+.back-button .btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #c5c4d947;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.nav-bottom .deconectare {
+    padding-left: 450px;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.abc {
+    border-bottom: 1px solid black;
+}
+
+#navbarNav {
+    margin-left: 60px;
+}
+
+.admin-bar .nav-item {
+    margin-right: 22px;
+
+}
+
+.nav-bottom .fa-house {
+    margin-right: 10px;
+}
+
+.space_edit_delete td .edit_delete {
+    margin-right: 8px;
+}
+
+.add-admins {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.admin-bar .dropdown-menu {
+    background-color: lavender;
+}
+
+.adaugare_administrator {
+    padding-top: 20px;
+    background-color: darkmagenta;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.add_admins {
+    margin-top: 20px !important;
+    margin-bottom: 7px;
+}
+
+.confirm_delete {
+    margin-top: 20px;
+}
+
+.lista_admins h4 {
+    line-height: none !important;
+    margin-bottom: 0;
+}
+
+.space_top_form {
+    margin-top: 20px !important
+}
+
+.label_edit label {
+    color: #fff;
+}
+
+.imagine-formular {
+    margin-left: 60px;
+    object-fit: contain;
+}
+
+.space_top_form input, .space_top_form textarea, .space_top_form select {
+    margin-bottom: 10px;
+}
+
+.space_top_form select {
+    text-transform: capitalize;
+}
