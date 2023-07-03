@@ -72,7 +72,7 @@ include 'header_user.php';
             <div class="col-lg-6">
                 <div class="formular-contact">
                     <section class="get-in-touch">
-                        <h3 class="title">Formular de contact</h3>
+                        <h3 class="title">Formular de contact2</h3>
                         <div class="contact-form">
                             <form class="row" action="send_contact_form.php" method="POST">
                                 <div class="form-field col-lg-12">
