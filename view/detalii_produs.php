@@ -126,15 +126,16 @@ if ($row_cat = mysqli_fetch_assoc($result))
                     </div>
                 </div>
                 <div class="col-lg-4 text-center price-cart">
-
-                    <div class="afisare_pret">
-                        <p> Pret: <span class="spatiu-gol"></span>
-                            <?php echo '' . $afisare_pret_initial . $afisare_pret_redus; ?>
-                        </p>
-                    </div>
-                    <div class="product-cart">
-                        <button class="btn btn-primary detalii-cart">Adauga in cos</button>
-                    </div>
+                    <form action="" method="post">
+                        <div class="afisare_pret">
+                            <p>Pret: <span class="spatiu-gol"><?php echo $afisare_pret_initial . $afisare_pret_redus; ?></span>
+                            </p>
+                        </div>
+                        <div class="product-cart">
+                            <input type="hidden" name="id_produs" value="<?php echo $id_produs; ?>">
+                            <button type="submit" class="btn btn-primary detalii-cart">Adauga in cos</button>
+                        </div>
+                    </form>
                     <div class="contact-detail">
                         <div class="comanda-telefonica"><i class="fa-solid fa-phone"></i></div>
                         <div>
@@ -197,22 +198,22 @@ if ($row_cat = mysqli_fetch_assoc($result))
                 if ($description)
                 {
                     ?>
-                <div class="product-description">
+                    <div class="product-description">
 
-                    <h4>Rezumat
-                        <?php echo $nume_produs; ?> <span>-</span>
-                        <?php echo $autor; ?>
-                    </h4>
-                    <p class="short-description">
-                        <?php echo substr($description, 0, 360); ?>
-                    </p>
-                    <p class="full-description" style="display: none;">
-                        <?php echo $description; ?>
-                    </p>
-                    <a href="#" class="read-more"><span class="text">Citeste mai mult</span> <span
-                            class="arrow"></span></a>
-                </div>
-                <?php
+                        <h4>Rezumat
+                            <?php echo $nume_produs; ?> <span>-</span>
+                            <?php echo $autor; ?>
+                        </h4>
+                        <p class="short-description">
+                            <?php echo substr($description, 0, 360); ?>
+                        </p>
+                        <p class="full-description" style="display: none;">
+                            <?php echo $description; ?>
+                        </p>
+                        <a href="#" class="read-more"><span class="text">Citeste mai mult</span> <span
+                                class="arrow"></span></a>
+                    </div>
+                    <?php
                 }
                 else
                 {

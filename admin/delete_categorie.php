@@ -20,8 +20,4 @@ else
 {
     echo "Eroarea la stergerea produselor:" . mysqli_error($conn);
 }
-
-//inchiderea conexiunii la baza de date
-mysqli_close($conn);
-
 ?>

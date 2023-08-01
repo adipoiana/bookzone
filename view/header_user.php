@@ -3,8 +3,17 @@ session_start();
 include $_SERVER['DOCUMENT_ROOT'] . '/bookzone/view/includes/config.php';
 $pagina = $_SERVER['REQUEST_URI'];
 
-?>
+include 'session-cart.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
+    $url = $_SERVER['REQUEST_URI'];
+    // Afișați un mesaj de succes sau redirecționați utilizatorul
+    echo "<script>alert('Produsul a fost adăugat în coș')
+        window.location.href='" . $url . "';
+        </script>";
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -83,13 +92,19 @@ $pagina = $_SERVER['REQUEST_URI'];
                                             </div>
                                         </ul>
                                     </li>
-                                    <li class="nav-item dropdown my-account">
-                                        <a class="nav-link dropdown-toggle" href="cos.php" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                    <li class="nav-item my-account">
+                                        <a class="nav-link dropdown-toggle" href="my_cart.php">
                                             <i class="fa-solid fa-cart-shopping"></i> Cosul meu
+                                            <?php
+
+                                            // Verificați dacă există produse în coș
+                                            if (!empty($_SESSION['cart']))
+                                            {
+                                                $num_items = count($_SESSION['cart']);
+                                                echo "<span class='badge'>$num_items</span>";
+                                            }
+                                            ?>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -162,9 +177,6 @@ $pagina = $_SERVER['REQUEST_URI'];
                             <div class="container-fluid">
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav menu-bar me-auto mb-2 mb-lg-0">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Aboneaza-te la newsletter</a>
-                                        </li>
                                         <li class="nav-item">
                                             <a class="nav-link <?php echo (strpos($pagina, 'contact') !== false ? 'active' : ''); ?>"
                                                 href="contact.php">Contact</a>

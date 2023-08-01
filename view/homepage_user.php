@@ -99,29 +99,29 @@ require 'header_user.php';
                     }
                     // Afisează produsul cu toate informațiile sale
                     ?>
-                <div class="product">
-                    <a href="detalii_produs.php?id_produs=<?php echo $row['id_produs']; ?>">
-                        <div class=" product-image">
-                            <?php echo $afisare_imagine; ?>
+                    <div class="product">
+                        <a href="detalii_produs.php?id_produs=<?php echo $row['id_produs']; ?>">
+                            <div class=" product-image">
+                                <?php echo $afisare_imagine; ?>
+                            </div>
+                            <div>
+                                <?php echo $afisare_procent; ?>
+                            </div>
+                            <div class="titlu_produs">
+                                <h5>
+                                    <?php echo $nume_produs; ?>
+                                </h5>
+                            </div>
+                            <div class="afisare_pret">
+                                <?php echo $afisare_pret_initial; ?>
+                                <?php echo $afisare_pret_redus; ?>
+                            </div>
+                        </a>
+                        <div class="product-cart">
+                            <button class="btn btn-primary adauga-in-cos">Adauga in cos</button>
                         </div>
-                        <div>
-                            <?php echo $afisare_procent; ?>
-                        </div>
-                        <div class="titlu_produs">
-                            <h5>
-                                <?php echo $nume_produs; ?>
-                            </h5>
-                        </div>
-                        <div class="afisare_pret">
-                            <?php echo $afisare_pret_initial; ?>
-                            <?php echo $afisare_pret_redus; ?>
-                        </div>
-                    </a>
-                    <div class="product-cart">
-                        <button class="btn btn-primary adauga-in-cos">Adauga in cos</button>
                     </div>
-                </div>
-                <?php
+                    <?php
                 }
                 ?>
 

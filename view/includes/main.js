@@ -1,3 +1,20 @@
+function updateCartItem(id_produs, newQuantity) {
+    $.ajax({
+        type: "POST",
+        url: "updateCart.php",
+        data: {
+            id_produs: id_produs,
+            quantity: newQuantity
+        },
+        success: function(pret) {
+            // Dacă actualizarea coșului a fost realizată cu succes, reîncărcați pagina
+            $('#total_price_'+id_produs).text(pret);
+        },
+        error: function(xhr, status, error) {
+            console.error(error);
+        }
+    });
+}
 $(document).ready(function () { // incarcare pagina
     $('.read-more').click(function (e) {
         e.preventDefault(); // intrerupe orice actiune pe buton
@@ -105,6 +122,26 @@ $(document).ready(function(){
     });
     
   })
+
+
+  const button = document.querySelector(".addtocart");
+const done = document.querySelector(".done");
+console.log(button);
+let added = false;
+button.addEventListener('click',()=>{
+  if(added){
+    done.style.transform = "translate(-110%) skew(-40deg)";
+    added = false;
+  }
+  else{
+    done.style.transform = "translate(0px)";
+    added = true;
+  }
+    
+});
+
+
+
 });
 
 

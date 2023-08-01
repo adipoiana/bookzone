@@ -2,6 +2,14 @@
 include 'header_user.php';
 ?>
 <div class="container page-contact">
+    <div class="container breadcrumb-top">
+        <nav class="breadcrumbs">
+            <a href="homepage_user.php" class="breadcrumbs__item">Pagina principala</a>
+            <!-- <a href="#shop" class="breadcrumbs__item">Shop</a>
+        <a href="#cart" class="breadcrumbs__item">Cart</a> -->
+            <a href="#" class="breadcrumbs__item is-active">Contact</a>
+        </nav>
+    </div>
     <div class="container contact">
         <div class="row">
             <div class="col-lg-2"></div>

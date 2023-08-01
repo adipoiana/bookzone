@@ -20,7 +20,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/bookzone/admin/includes/config.php';
 
 <body>
     <div class="container-fluid" style="padding:0;">
-        <div class="container user-cart">
+        <div class="container">
         </div>
         <div class="nav-bottom">
             <div class="container-fluid">
@@ -32,12 +32,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/bookzone/admin/includes/config.php';
                                     <ul class="navbar-nav admin-bar">
                                         <li class="nav-item">
                                             <a class="nav-link" href="homepage_admin.php"> <i
-                                                    class="fa-solid fa-house"></i>Panou de
-                                                Administrare</a>
+                                                    class="fa-solid fa-house"></i>Acasa</a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link dropdown-toggle" href="utilizatori_clienti.php"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Utilizatori
                                             </a>
                                             <ul class="dropdown-menu">
@@ -50,29 +49,30 @@ include $_SERVER['DOCUMENT_ROOT'] . '/bookzone/admin/includes/config.php';
                                     </ul>
                                     </li>
                                     <div class="dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                        <a class="nav-link dropdown-toggle" href="listare_categorii.php" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             Categorii
                                         </a>
 
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="listare_categorii.php">Listare</a></li>
+                                            <hr>
                                             <li><a class="dropdown-item"
                                                     href="formular_adaugare_categorie.php">Adaugare</a></li>
                                         </ul>
                                     </div>
                                     <div class="dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                        <a class="nav-link dropdown-toggle" href="listare_produse.php" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             Produse
                                         </a>
 
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="listare_produse.php">Listare</a></li>
+                                            <hr>
                                             <li><a class="dropdown-item"
                                                     href="formular_adaugare_produse.php">Adaugare</a></li>
-                                            <li><a class="dropdown-item" href="formular_upload_img.php">Incarcare
-                                                    imagini</a></li>
+
                                         </ul>
                                     </div>
                                     <li class="nav-item">
